@@ -57,7 +57,7 @@ public class App {
 
     public static int solveCaptcha(ChromeDriver driver) throws Exception{ //captcha solver
         String content = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader("app\\src\\main\\java\\com\\scraper\\utilities\\captchasolver.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("app\\src\\main\\java\\com\\scraper\\utilities\\captchasolver.js"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 content += line;
@@ -168,13 +168,13 @@ public class App {
             
             
             solveCaptcha(driver); //onboarding
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\scraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\data.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\TimeTablescraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\TimeTabledata.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Attendancescraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\AttendanceData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Coursescraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\CourseData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Marksscraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\MarksData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\CGPAscraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\CGPAData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\ExamSchedulescraper.txt", "app\\src\\main\\java\\com\\scraper\\Extracted\\ExamScheduleData.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\scraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\data.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\TimeTablescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\TimeTabledata.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Attendancescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\AttendanceData.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Coursescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\CourseData.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Marksscraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\MarksData.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\CGPAscraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\CGPAData.json");
+            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\ExamSchedulescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\ExamScheduleData.json");
             driver.quit();
         }
         catch(Exception e){
