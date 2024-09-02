@@ -1,1 +1,88 @@
-{"attendance":[{"course_type":"Course Detail","slot":"Class Detail","attended":0,"total":0,"percentage":0},{"course_type":"BCSE103E - Computer Programming: Java - Embedded Theory","slot":"VL2023240103473 - TG1 - SJT421","attended":11,"total":14,"percentage":79},{"course_type":"BCSE103E - Computer Programming: Java - Embedded Lab","slot":"VL2023240104534 - L47","attended":44,"total":56,"percentage":79},{"course_type":"BECE102L - Digital Systems Design - Theory Only","slot":"VL2023240104125 - B1","attended":35,"total":43,"percentage":82},{"course_type":"BECE102P - Digital Systems Design Lab - Lab Only","slot":"VL2023240104212 - L45","attended":22,"total":28,"percentage":79},{"course_type":"BENG102P - Technical Report Writing - Lab Only","slot":"VL2023240103422 - L39","attended":24,"total":26,"percentage":93},{"course_type":"BFRE101L - French I - Theory Only","slot":"VL2023240104637 - F1 - SJT304","attended":23,"total":29,"percentage":80},{"course_type":"BMAT201L - Complex Variables and Linear Algebra - Theory Only","slot":"VL2023240102063 - C1","attended":49,"total":59,"percentage":84},{"course_type":"BMAT205L - Discrete Mathematics and Graph Theory - Theory Only","slot":"VL2023240102125 - A1","attended":46,"total":58,"percentage":80},{"course_type":"BSTS202P - Qualitative Skills Practice II - Soft Skill","slot":"VL2023240101469 - D1","attended":35,"total":44,"percentage":80}]}
+{
+  "attendance": [
+    {
+      "course_type": "Course Detail",
+      "slot": "Class Detail",
+      "attended": 0,
+      "total": 0,
+      "percentage": 0
+    },
+    {
+      "course_type": "BCSE302L - Database Systems - Theory Only",
+      "slot": "VL2024250101536 - A1",
+      "attended": 16,
+      "total": 17,
+      "percentage": 95
+    },
+    {
+      "course_type": "BCSE302P - Database Systems Lab - Lab Only",
+      "slot": "VL2024250102248 - L33",
+      "attended": 10,
+      "total": 12,
+      "percentage": 84
+    },
+    {
+      "course_type": "BCSE303L - Operating Systems - Theory Only",
+      "slot": "VL2024250101606 - B1",
+      "attended": 16,
+      "total": 18,
+      "percentage": 89
+    },
+    {
+      "course_type": "BCSE303P - Operating Systems Lab - Lab Only",
+      "slot": "VL2024250102235 - L53",
+      "attended": 10,
+      "total": 10,
+      "percentage": 100
+    },
+    {
+      "course_type": "BCSE306L - Artificial Intelligence - Theory Only",
+      "slot": "VL2024250101432 - E1",
+      "attended": 16,
+      "total": 17,
+      "percentage": 95
+    },
+    {
+      "course_type": "BCSE307L - Compiler Design - Theory Only",
+      "slot": "VL2024250101734 - C1",
+      "attended": 16,
+      "total": 17,
+      "percentage": 95
+    },
+    {
+      "course_type": "BCSE307P - Compiler Design Lab - Lab Only",
+      "slot": "VL2024250102409 - L31",
+      "attended": 12,
+      "total": 14,
+      "percentage": 86
+    },
+    {
+      "course_type": "BCSE308L - Computer Networks - Theory Only",
+      "slot": "VL2024250102020 - D1",
+      "attended": 16,
+      "total": 18,
+      "percentage": 89
+    },
+    {
+      "course_type": "BCSE308P - Computer Networks Lab - Lab Only",
+      "slot": "VL2024250102383 - L43",
+      "attended": 8,
+      "total": 10,
+      "percentage": 80
+    },
+    {
+      "course_type": "BCSE355L - AWS Solutions Architect - Theory Only",
+      "slot": "VL2024250101619 - F1",
+      "attended": 15,
+      "total": 18,
+      "percentage": 84
+    },
+    {
+      "course_type": "BSTS301P - Advanced Competitive Coding - I - Soft Skill",
+      "slot": "VL2024250100003 - G1",
+      "attended": 15,
+      "total": 16,
+      "percentage": 94
+    }
+  ]
+}

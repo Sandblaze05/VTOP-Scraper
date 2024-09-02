@@ -82,7 +82,8 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String sId = "\'"+getID("test\\src\\data.json")+"\'";
+        String sId = "\'"+getID("app\\src\\main\\java\\com\\scraper\\Extracted\\data.json")+"\'";
+        System.out.println(sId);
         // Execute the JavaScript code from the file
         String result =(String) ((JavascriptExecutor)driver).executeScript(content.toString().replaceAll("semId", sId));
         System.out.println(result);
