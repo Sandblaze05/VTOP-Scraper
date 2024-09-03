@@ -1,4 +1,4 @@
-**⚠️ Only works for VIT Vellore**
+**⚠️ Only works for VIT Vellore** 
 # VTOP-Scraper
 Uses selenium to login to vtop and scrape all user details
 
