@@ -5,7 +5,9 @@ Uses selenium to login to vtop and scrape all user details
 # How to use?
 To enter credentials go to the following filepath:`VTOP-Scraper/app/src/main/java/com/scraper/utilities/config.json`
 
-Enter the user name and password at the mentioned location and run App.java.
+Enter the user name and password at the mentioned location, resolve dependencies in pom.xml and run App.java.
+
+*Make sure you have maven installed.*
 
 # Important
 To solve captcha a javascript is executed but it can't solve google reCaptcha. To avoid user intervention the login page is refreshed until the `captchStr` element can be located in the html.
