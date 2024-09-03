@@ -99,7 +99,7 @@ public class App {
 
             if (!jsonFile.exists()) {
                 System.out.println("File not found: " + filePath );
-                return "VL20232401";
+                return "VL20232401"; //default to this semester ID
             }
 
             JsonNode rootNode = objectMapper.readTree(jsonFile);
