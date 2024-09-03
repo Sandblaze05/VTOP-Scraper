@@ -12,7 +12,7 @@ If the `config.json` doesn't exist at the expected file path the code will defau
 # Important
 To solve captcha a javascript is executed but it can't solve google reCaptcha. To avoid user intervention the login page is refreshed until the `captchStr` element can be located in the html.
 
-If any unexpected pop up message shows up upon logging in the javascripts fail to execute. For eg: malpractice notice during examinations.
+If any unexpected pop up message shows up upon logging in, the javascripts fail to execute. For eg: malpractice notice during examinations.
 
 Each js file under `VTOP-Scraper/app/src/main/java/com/scraper/utilities` has a `data` variable in the first line containing `semId`, this is replaced by the current semester ID using `data.json` which saves the response given by running `scraper.js` (other than scraper.js no other javascript file can be executed alone without replacing the placeholder `semId` with the desired semID).
 
