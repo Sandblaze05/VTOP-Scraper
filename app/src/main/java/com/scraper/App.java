@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class App {
 
-    static String config[] = processConfig("app\\src\\main\\java\\com\\scraper\\utilities\\config.json");
+    static String config[] = processConfig("VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\config.json");
 
     public static void overrideCaptcha(ChromeDriver driver)throws Exception{ //until recaptcha changes to captcha
         By elementLocator = By.id("captchaStr");
@@ -57,7 +57,7 @@ public class App {
 
     public static int solveCaptcha(ChromeDriver driver) throws Exception{ //captcha solver
         String content = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader("app\\src\\main\\java\\com\\scraper\\utilities\\captchasolver.js"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\captchasolver.js"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 content += line;
@@ -82,7 +82,7 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String sId = "\'"+getID("app\\src\\main\\java\\com\\scraper\\Extracted\\data.json")+"\'";
+        String sId = "\'"+getID("VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\data.json")+"\'";
         System.out.println(sId);
         // Execute the JavaScript code from the file
         String result =(String) ((JavascriptExecutor)driver).executeScript(content.toString().replaceAll("semId", sId));
@@ -98,7 +98,7 @@ public class App {
             File jsonFile = new File(filePath);
 
             if (!jsonFile.exists()) {
-                System.out.println("File not found: " + filePath + " Defaulting to 'VL20232401'");
+                System.out.println("File not found: " + filePath );
                 return "VL20232401";
             }
 
@@ -159,6 +159,12 @@ public class App {
     
     public static void main(String[] args) throws Exception {
         try{
+
+            File f= new File("VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\data.json");
+            if(f.exists())
+            {
+                f.delete();
+            }
             //EdgeDriver driver = new EdgeDriver();
             ChromeDriver driver = new ChromeDriver();
             
@@ -169,13 +175,13 @@ public class App {
             
             
             solveCaptcha(driver); //onboarding
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\scraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\data.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\TimeTablescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\TimeTabledata.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Attendancescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\AttendanceData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Coursescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\CourseData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\Marksscraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\MarksData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\CGPAscraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\CGPAData.json");
-            executeJavaScriptFile(driver, "app\\src\\main\\java\\com\\scraper\\utilities\\ExamSchedulescraper.js", "app\\src\\main\\java\\com\\scraper\\Extracted\\ExamScheduleData.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\scraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\data.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\TimeTablescraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\TimeTabledata.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\Attendancescraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\AttendanceData.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\Coursescraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\CourseData.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\Marksscraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\MarksData.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\CGPAscraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\CGPAData.json");
+            executeJavaScriptFile(driver, "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\utilities\\ExamSchedulescraper.js", "VTOP-Scraper\\app\\src\\main\\java\\com\\scraper\\Extracted\\ExamScheduleData.json");
             driver.quit();
         }
         catch(Exception e){
