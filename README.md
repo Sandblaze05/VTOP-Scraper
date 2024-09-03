@@ -7,7 +7,7 @@ To enter credentials go to the following filepath:`VTOP-Scraper/app/src/main/jav
 
 Enter the user name and password at the mentioned location and run App.java.
 
-If the `config.json` doesn't exist at the expected file path the code will default to using semester ID **'VL20232401'** which will not return any data for anyone who joined after Fall 2023.
+If the `data.json` doesn't exist at the expected file path the code will default to using semester ID **'VL20232401'** which will not return any data for anyone who joined after Fall 2023.
 
 # Important
 To solve captcha a javascript is executed but it can't solve google reCaptcha. To avoid user intervention the login page is refreshed until the `captchStr` element can be located in the html.
